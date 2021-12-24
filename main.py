@@ -27,7 +27,8 @@ def spam():
         amount -= 1
         sleep(interval)
 
-    if isSpamStopped:
+    if isSpamStopped or not amount:
+        print("Spam has successfully stopped")
         isSpamStopped = False
         spam()
 
